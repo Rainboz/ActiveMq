@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>  
+<head runat="server">  
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <style>
+    	#mov{
+    		background-color: #00DDCC;
+    		width: 50%;
+    		height: 50%;  
+        	top: 20%;
+        	left: 20%;  
+        	position: absolute;
+    	}
+    </style>
+    <script>  
+        var mouseX, mouseY;  
+        var objX, objY;  
+        var isDowm = false; 
+        function mouseDown(obj, e) {  
+        	var div = document.getElementById("mov");  
+            obj.style.cursor = "move";  
+			objX = div.offsetLeft;
+			objY = div.offsetTop;
+            mouseX = e.clientX;  
+            mouseY = e.clientY;  
+            isDowm = true;  
+        }  
+        function mouseMove(e) {  
+            var div = document.getElementById("mov");  
+            var x = e.clientX;  
+            var y = e.clientY;  
+            if (isDowm) {  
+                div.style.left = parseInt(objX) + parseInt(x) - parseInt(mouseX) + "px";  
+                div.style.top = parseInt(objY) + parseInt(y) - parseInt(mouseY) + "px";  
+            }  
+        }  
+        function mouseUp(e) {  
+            if (isDowm) {  
+                var x = e.clientX;  
+                var y = e.clientY;  
+                var div = document.getElementById("mov");  
+                div.style.left = parseInt(objX) + parseInt(x) - parseInt(mouseX) + "px";  
+                div.style.top = parseInt(objY) + parseInt(y) - parseInt(mouseY) + "px";  
+                div.style.cursor = "default";  
+                isDowm = false;  
+            }  
+        }
+
+$(document).ready(function(){
+   $(function(){
+    $("#allKm").click(function(){
+        if ($(this).prop("checked")) {
+            $("input[class='onekm']:checkbox").each(function(){
+                $(this).prop("checked",true);
+                show();
+            });
+        }else{
+            $("input[class='onekm']:checkbox").each(function () {
+                $(this).prop("checked", false);
+                sessionStorage.setItem("chs","");
+                sessionStorage.setItem("km","");
+            });
+        }   
+    });
+    //当其中不勾选某一个选项的时候,则去掉全选复选框
+    $(":checkbox[class='onekm']").click(function () {
+        $("#allKm").prop('checked',
+        $(":checkbox[class='onekm']").length == $(":checkbox[class='onekm']:checked").length);
+    });
+    $('input[type="checkbox"]').change(function(e){
+        console.log("ssssssssssssssssssssssss");
+        if ($("input[type='checkbox']").is(':checked')) {
+               show();
+        }else{
+
+            sessionStorage.setItem("chs","");
+            sessionStorage.setItem("km","");
+        }
+    })
+});
+    $("#test").click(function(){
+        open();
+    });
+    $("#a").click(function(){
+        open();
+    });
+});  
+function show(){
+    obj = document.getElementsByName("test");
+    check_val = [];
+    
+    var chs1 = [];
+    var chs2 = [];
+    
+    for(var k in obj){
+        
+        if(obj[k].checked){
+            var km = [];
+            var add = obj[k].value.slice(0,1);
+            check_val.push(obj[k].value);
+            switch(add){
+                case "1":
+                    var add1 = obj[k].value.slice(0,1);
+                    chs1.push(obj[k].value.slice(1,2));
+                    
+                    break;
+                case "2":
+                    var add2 = obj[k].value.slice(0,1);
+                    chs2.push(obj[k].value.slice(1,2));
+                    
+                    break;
+            }
+
+            if (add2 == undefined) {
+                km.push({"add":add1,"chs":chs1});
+            }else if (add1 == undefined){
+                km.push({"add":add2,"chs":chs2});
+            }else{
+                km.push({"add":add1,"chs":chs1},{"add":add2,"chs":chs2});
+            }
+            
+            //console.log(chs1+"ss"+chs2);
+            //console.log(add1+"ss"+add2);
+            
+            var kmStr = JSON.stringify(km);
+            //console.log(kmStr);
+        }
+    }
+    var chs= JSON.stringify(check_val);
+    sessionStorage.setItem("chs",chs);
+    console.log(check_val);
+    //多选开关km参数
+    var kmJsonStr = JSON.stringify(km);
+    sessionStorage.setItem('km',kmJsonStr);
+    console.log(kmJsonStr);
+}
+function open(){
+    var chsStr = sessionStorage.getItem('chs');
+    console.log(chsStr);
+    var kmParam = sessionStorage.getItem('km');
+    console.log("发送km参数："+kmParam);
+}
+$(function() {
+    $("#btn").click(function(){
+        $("#qw option[value='"+0+"']").attr("selected", "selected");
+        console.log("kshdoh");
+    });
+});
+    </script>
+</head>  
+<body>  
+    <div id="mov" onmousedown="mouseDown(this,event)" onmousemove="mouseMove(event)" onmouseup="mouseUp(event)"></div>
+<div style="text-align: center;">
+     <span><input id="allKm" type="checkbox" />全选</span> 
+    <br />
+    <input name="test" class="onekm"  type="checkbox" value="11" />
+    <input name="test" class="onekm" type="checkbox" value="12" />
+    <input name="test" class="onekm" type="checkbox" value="13" />
+    <input name="test" class="onekm" type="checkbox" value="14" />
+     <input name="test" class="onekm" type="checkbox" value="21" />
+    <button id="test">打开</button>
+    <a id="a">dakai</a>
+    <select id="qw">
+        <option >1</option>
+        <option value ="0">asdasdasd</option>
+        <option>asdasdasd</option>
+        <option>asdasdas</option>
+    </select>
+    <button id="btn">下拉框还原默认值</button>
+</div>
+<div style="text-align: center;">
+    <table id="Mtable" class="table-bordered" style="border: 0.5px solid #c0c0c0;font-size: 12px;">
+    <tr>
+        <th><select><option>相位</option></select></th>
+        <th><select><option>电流(A)</option></select></th>
+        <th><select><option>电压(V)</option></select></th>
+        <th><select><option>功率(kW)</option></select></th>
+        <th><select><option>电能</option></select></th>
+    </tr>
+    <tr><td>A</td><td>21.34835</td><td>232.05351</td><td>3.6159344</td><td>0</td></tr>
+    <tr><td>B</td><td>18.309868</td><td>233.69365</td><td>2.9618793</td><td>0</td></tr>
+    <tr><td>C</td><td>27.781235</td><td>230.54535</td><td>4.704938</td><td>0</td></tr>
+    <tr><td>合相</td><td>0.00</td><td>696.29251</td><td>11.282751</td><td>0</td></tr>
+</table>
+</div>
+
+</body>  
+</html>

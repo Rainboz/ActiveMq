@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ECharts入门</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的DOM容器-->
+    <div id='main' style='width:33%;height:400px; float: left;'></div>
+   <!-- 引入ECharts文件 -->
+    <script src='js/echarts.simple.min.js'></script>
+    <script>
+          //基于准备好的DOM，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+          //指定图表的配置项和数据
+        var option = {
+            title:{
+                text:'EChars入门'
+            },
+            //提示框组件
+            tooltip:{
+                //坐标轴触发，主要用于柱状图，折线图等
+                trigger:'axis'
+            },
+            //图例
+            legend:{
+                data:['销量']
+            },
+            //横轴
+            xAxis:{
+                data:["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+            },
+            //纵轴
+            yAxis:{},
+            //系列列表。每个系列通过type决定自己的图表类型
+            series:[{
+                name:'销量',
+                //折线图
+                type:'pie',
+                data:[
+                    {name: 'A', value: 20},
+                    {name: 'B', value: 60},
+                    {name: 'C', value: 20}
+                ]
+            }]
+        };
+        //使用刚指定的配置项和数据显示图表
+        myChart.setOption(option);
+    </script>
+    <div id='test' style='width:33%;height:400px;float: right;border:1px solid #c0c0c0;'></div>
+    <script>
+    var myChart1 = echarts.init(document.getElementById('test'));
+        myChart1.showLoading();
+        $.ajax({
+            url:"http://47.100.9.160:8999/HttpAPI-0.0.5/user/Select",
+            type:"get",
+            dataType:"json",
+            success:function(r){
+                myChart1.hideLoading();
+                console.log("-----设备列表-----加载所有配电箱资源成功---------");
+                 
+          //指定图表的配置项和数据
+        var option = {
+            title:{
+                text:''
+            },
+            //提示框组件
+            tooltip:{
+                //坐标轴触发，主要用于柱状图，折线图等
+                trigger:'axis'
+            },
+            //图例
+            legend:{
+                data:['用电量']
+            },
+            //横轴
+            xAxis:{
+                data:["8-1","8-2","8-3","8-4","8-5","8-6"]
+            },
+
+            //纵轴
+            yAxis:{},
+            //系列列表。每个系列通过type决定自己的图表类型
+            series:[{
+                name:'用电量',
+                //折线图
+                type:'bar',
+                data:[
+                    {name: 'A', value: r.return_data},
+                    {name: 'B', value: r.return_data.id},
+                    {name: 'C', value: 10}
+                ]
+            }]
+        };
+        //使用刚指定的配置项和数据显示图表
+        myChart1.setOption(option);
+            }
+        });
+        
+        
+          //基于准备好的DOM，初始化echarts实例
+       
+    </script>
+     <div id='test2' style='width:33%;height:400px;float: right;border: 0.5px solid #c0c0c0'></div>
+<script>
+          //基于准备好的DOM，初始化echarts实例
+        var myChart2 = echarts.init(document.getElementById('test2'));
+          //指定图表的配置项和数据
+        myChart2.setOption({
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: '60%',
+            data:[
+                {value:20, name:'视频广告'},
+                {value:20, name:'联盟广告'},
+                {value:222, name:'邮件营销'},
+                {value:20, name:'直接访问'},
+                {value:20, name:'搜索引擎'}
+            ]
+        }
+    ]
+});
+    </script>
+
+
+
+</body>
+</html>
+

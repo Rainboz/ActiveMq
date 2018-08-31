@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>亮化联动</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<style type="text/css">
+tr td{
+	border:0.5px solid #c0c0c0;
+}	
+.label_c{
+	height: 3px;
+}	
+</style>
+</head>
+<body>
+	<section style="height: 260px;width: 100%;margin: 0px auto;border:1px solid #c0c0c0;">
+		<div id="model" style="width: 60%;height: 250px;margin: 5px;border:1px solid #c0c0c0;float: left;"></div>
+		<div id="ctrl" style="width: 38%;height: 250px;margin: 5px;border:1px solid #c0c0c0;float: right;">
+			
+			<div style="overflow: hidden;margin:10px auto;line-height: 70px;">
+				<table class="table-hover" style="width: 100%;border:1px solid #c0c0c0;text-align: center;">
+					<tr>
+						<td>
+							<em>播放模式：</em>
+						</td>
+						<td>
+							<div class="radio">
+    							<label class="label_c">
+      								<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="0">  单目循环
+    							</label>
+  							</div>
+						</td>
+						<td>
+							<div class="radio">
+    							<label class="label_c">
+      								<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="1">  列表循环
+    							</label>
+  							</div>
+						</td>
+						<td>
+							<div class="radio">
+    							<label class="label_c">
+      								<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2"> 随机播放
+    							</label>
+  							</div>
+						</td>
+						<td>
+							<div class="radio">
+    							<label class="label_c">
+      								<input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="3"> 单次播放
+    							</label>
+  							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<select style="width: 60%">
+								<option>节目</option>
+							</select>
+						</td>
+						<td colspan="2">
+							<button class="btn btn-info" title="播放">播放</button>
+						</td>
+						
+					</tr>
+					<tr>
+						<td colspan="3">
+							<select style="width: 60%">
+								<option>组合节目</option>
+							</select>
+						</td>
+						<td colspan="2">
+							<button class="btn btn-info" title="停止">停止</button>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -23,7 +23,7 @@ public class MqConfig {
     }
     @Bean
     public ActiveMQTopic topic(){
-        return new ActiveMQTopic("mvp.topic");
+        return new ActiveMQTopic("topic.sylh");
     }
     @Bean
     public ActiveMQConnectionFactory connectionFactory() {

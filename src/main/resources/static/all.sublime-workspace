@@ -1,0 +1,819 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"bo",
+				"bold"
+			],
+			[
+				"ba",
+				"background-image"
+			],
+			[
+				"b",
+				"bold"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"cl",
+				"class	Attr"
+			],
+			[
+				"data",
+				"datas1"
+			],
+			[
+				"pt",
+				"padding-top"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"p",
+				"padding"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"c",
+				"center"
+			],
+			[
+				"tea",
+				"text-align"
+			],
+			[
+				"sl",
+				"select	Tag"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"cnte",
+				"center"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"fo",
+				"for	for (…) {…}"
+			],
+			[
+				"n",
+				"num"
+			],
+			[
+				"ran",
+				"rand"
+			],
+			[
+				"get",
+				"getOrder"
+			],
+			[
+				"a",
+				"align"
+			],
+			[
+				"re",
+				"ready"
+			],
+			[
+				"bt",
+				"button"
+			],
+			[
+				"onc",
+				"onclick	Attr"
+			],
+			[
+				"vl",
+				"volume"
+			],
+			[
+				"btn",
+				"button	Tag"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"id",
+				"id2"
+			],
+			[
+				"da",
+				"dataType"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"te",
+				"text"
+			],
+			[
+				"device",
+				"deviceId"
+			],
+			[
+				"di",
+				"div	Tag"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"na",
+				"name111"
+			],
+			[
+				"al",
+				"alert"
+			],
+			[
+				"comm",
+				"commonUser"
+			],
+			[
+				"class",
+				"class"
+			],
+			[
+				"clas",
+				"class"
+			],
+			[
+				"cla",
+				"class	class …"
+			],
+			[
+				"common",
+				"commonIndex"
+			],
+			[
+				"com",
+				"common"
+			],
+			[
+				"ind",
+				"index"
+			],
+			[
+				"par",
+				"padding-right"
+			],
+			[
+				"texta",
+				"text-align"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"ope",
+				"operation"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"fla",
+				"float"
+			],
+			[
+				"gr",
+				"gray"
+			],
+			[
+				"l",
+				"line"
+			],
+			[
+				"can",
+				"canvas1"
+			],
+			[
+				"s",
+				"script	Tag"
+			],
+			[
+				"section",
+				"section01"
+			],
+			[
+				"he",
+				"header	Tag"
+			],
+			[
+				"nav",
+				"nav01"
+			],
+			[
+				"im",
+				"img	Tag"
+			],
+			[
+				"t",
+				"time"
+			],
+			[
+				"tx",
+				"text-decoration"
+			],
+			[
+				"em",
+				"embed	Tag"
+			],
+			[
+				"o",
+				"object	Tag"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"f",
+				"footer"
+			],
+			[
+				"ac",
+				"article	Tag"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"u",
+				"url()"
+			],
+			[
+				"sha",
+				"share"
+			],
+			[
+				"text",
+				"text-decoration-line"
+			],
+			[
+				"share",
+				"share1"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"fos",
+				"font-size"
+			],
+			[
+				"se",
+				"section"
+			],
+			[
+				"ar",
+				"article	Tag"
+			],
+			[
+				"d",
+				"div	Tag"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"m",
+				"music"
+			],
+			[
+				"mat",
+				"margin-top"
+			],
+			[
+				"lh",
+				"line-height"
+			],
+			[
+				"bl",
+				"block"
+			],
+			[
+				"vi",
+				"visited"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"sty",
+				"style	Tag"
+			],
+			[
+				"LOGO",
+				"LOGO1"
+			],
+			[
+				"sh",
+				"share"
+			],
+			[
+				"boder",
+				"border"
+			],
+			[
+				"blo",
+				"bold"
+			],
+			[
+				"fra",
+				"frame	Tag"
+			],
+			[
+				"fram",
+				"frameset	Tag"
+			],
+			[
+				"st",
+				"style"
+			],
+			[
+				"请输入用户名",
+				"请输入用户名"
+			],
+			[
+				"us",
+				"usr"
+			],
+			[
+				"show",
+				"showpic"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"banner",
+				"banner123"
+			],
+			[
+				"main",
+				"main"
+			],
+			[
+				"onm",
+				"onmouseover	Attr"
+			],
+			[
+				"rgba",
+				"rgba()"
+			],
+			[
+				"tr",
+				"transparent"
+			],
+			[
+				"fonts",
+				"font-size"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"foot",
+				"footer	Tag"
+			],
+			[
+				"ban",
+				"banner1"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"U",
+				"url()"
+			],
+			[
+				"ons",
+				"onsubmit	Attr"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"导航",
+				"导航结束"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"lin",
+				"line-height"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 335.0,
+		"last_filter": "pcip",
+		"selected_items":
+		[
+			[
+				"pcip",
+				"Package Control: Install Package→安装插件"
+			],
+			[
+				"in",
+				"Package Control: Install Package→安装插件"
+			],
+			[
+				"i",
+				"Package Control: Install Package→安装插件"
+			]
+		],
+		"width": 594.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Administrator/Desktop/mSlider/index.html",
+		"/C/Users/Administrator/Desktop/图/45.html",
+		"/C/Users/Administrator/Desktop/45.html",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/sidebar/yjlh/20180514.html",
+		"/C/Users/Administrator/Desktop/randSave.html",
+		"/C/Users/Administrator/Desktop/yy.html",
+		"/C/Users/Administrator/Desktop/Sublime Text 3x64/randSave.html",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/flash/createJs_bjyy.jsp",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/device_list.html",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/test2.html",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/zhbtest.html",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/mjgl.jsp",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/yjlh.html",
+		"/C/Users/Administrator/Desktop/test.html",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/getJson/bjyy.jsp",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/bjyyid.html",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/sss.html",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/footPage/bjyy.jsp",
+		"/C/Users/Administrator/Desktop/ibms/ofbiz/ibms/webapp/common/alarm/getJSONAlarmTypeCombobox.jsp",
+		"/C/Users/Administrator/Desktop/ala.html",
+		"/D/study/H5/yymwork/9大行星动画/9dxxdh.html",
+		"/D/study/softwork/littleboy/开发区/index.html",
+		"/D/study/softwork/littleboy/开发区/hangmenu.php",
+		"/D/study/softwork/littleboy/开发区/menu.php",
+		"/G/study/2017down/784269332/1/web/thinkphp/start.php",
+		"/G/study/2017down/784269332/1/web/thinkphp/base.php",
+		"/G/study/2017down/784269332/1/web/hello.php",
+		"/G/study/2017down/Demo/think_down/public/index.php",
+		"/G/study/2017down/Demo/think_down/app/index/controller/User.php",
+		"/G/study/2017down/Demo/think_down/thinkphp/convention.php",
+		"/G/study/2017down/Demo/think_down/application/index/controller/Index.php",
+		"/G/study/2017down/Demo/think_down/application/admin/controller/Index.php",
+		"/G/study/2017down/Demo/think_down/application/common/controller/Index.php",
+		"/G/study/2017down/Demo/think_down/application/common/controller/User.php",
+		"/G/study/2017down/Demo/think_down/application/index/controller/User.php",
+		"/G/study/2017down/Demo/think_down/application/database.php",
+		"/G/study/2017down/Demo/think_down/application/config.php",
+		"/C/Users/dell/Desktop/Feedback/Feedback.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/practice/第3章/menu.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/practice/第3章/liuyan.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/practice/第3章/canvas.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/practice/第3章/jhv.htm",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/practice/第3章/h5.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/最终文件/第5章/5-2-1.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/最终文件/第4章/4-3.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/practice/第3章/fistdemo.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/最终文件/第3章/3-3-3.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/practice/第一章/fistdemo.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/最终文件/第3章/3-5-4.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/最终文件/第3章/3-4-2.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/最终文件/第3章/3-4-1.html",
+		"/E/Rainworkzy/Rain workpace/大学总评文档/2017下半年学期/移动应用开发/源文件/第3章/3-3-3.html",
+		"/E/Rainworkzy/Sublime Text 3x64/workplace/main.css",
+		"/E/Rainworkzy/Sublime Text 3x64/workplace/index.html",
+		"/C/Users/dell/Desktop/网页设计/index.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/space.html",
+		"/C/Users/dell/Desktop/Rain workpace/2016下学期/创新创业/space.html",
+		"/C/Users/dell/Desktop/Rain workpace/2016下学期/网页/space.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/index.html",
+		"/C/Users/dell/Desktop/创新创业/my.html",
+		"/C/Users/dell/Desktop/创新创业/head.css",
+		"/C/Users/dell/Desktop/创新创业/system.html",
+		"/C/Users/dell/Desktop/创新创业/message.html",
+		"/C/Users/dell/Desktop/创新创业/news.html",
+		"/C/Users/dell/Desktop/创新创业/index.html",
+		"/C/Users/dell/Desktop/创新创业/share.html",
+		"/C/Users/dell/Desktop/创新创业/js/void.js",
+		"/C/Users/dell/Desktop/创新创业/js/Return.js",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/main.css",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/news.html",
+		"/C/Users/dell/Desktop/创新创业/main.css",
+		"/C/Users/dell/Desktop/创新创业作业/my.html",
+		"/C/Users/dell/Desktop/创新创业作业/index.html",
+		"/C/Users/dell/Desktop/创新创业作业/head.css",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/order.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/share.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/rorder.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/my.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/upload.html",
+		"/C/Users/dell/Desktop/cs.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/left.css",
+		"/C/Users/dell/Desktop/Rain workpace/网页设计/生日快乐！/index.html",
+		"/C/Users/dell/Desktop/创新创业作业/js/void.js",
+		"/C/Users/dell/Desktop/zg网页/zg.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/head.css",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/zg.html",
+		"/C/Users/dell/Desktop/index.html",
+		"/C/Users/dell/Desktop/zfa.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/all.css",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/sharemain.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/foot.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/head.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/main.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/cs1.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/js/void.js",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/banner.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/left.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/sub1.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/zhb.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/cs.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/void.js",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/Rain/index.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/css/main.css",
+		"/C/Users/dell/Desktop/生日快乐！/生日快乐！/index.html",
+		"/C/Users/dell/Desktop/生日快乐！/index.html",
+		"/C/Users/dell/Desktop/生日/index.html",
+		"/C/Users/dell/Desktop/生日/main.css",
+		"/C/Users/dell/Desktop/生日/hiu.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/ZHB.html",
+		"/C/Users/dell/Desktop/daoh.html",
+		"/C/Users/dell/Desktop/Sublime Text 3x64/workplace/youl.html"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 92.0,
+		"where_history":
+		[
+			"C:\\Users\\Administrator\\Desktop\\ibms\\ofbiz",
+			"E:\\Rainworkzy\\Rain workpace\\大学总评文档\\2017下半年学期\\移动应用开发\\practice\\第3章"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"left",
+			"onmousemove",
+			"queryDevice",
+			"f_img",
+			"icon-monitor",
+			"avName",
+			"		\n",
+			"avName",
+			"base.css",
+			"导出",
+			"mjgl_query.jsp",
+			"!--尾部开始-->\n\n    <div class=\"clear\"></div>\n	<div class=\"pg\" id=\"foot\">\n		ZHB 版权所有 &copy; 2016 All Rights Reserver\n	</div>\n	<!--尾部结束-->\n	<a href=\"javascript:;\" id=\"btn\" title=\"回到顶部\"></a>",
+			"body{background-color: #333;}\n		header{\n			background: rgba(0,0,0,0.4);\n		}\n		nav{\n			height: 50px;\n			background: transparent;\n		}\n		#banner{\n			height: 700px;\n			background: transparent;\n		}\n		nav ul{\n			list-style: none;\n			margin: 0;\n			float: right;\n		}\n		nav ul li, nav .logo{\n			line-height: 50px;\n			display: inline-block;\n			margin-right: 20px; \n\n		}\n\n		nav ul li a{\n			line-height: inherit;\n			text-decoration: none;\n			display: inline-block;\n			height: inherit;\n			color: #fff;\n		}\n		nav ul li.logo{\n			float: left;\n			padding: 10px;\n		}\n		#banner .inner{\n			max-width: 300px;\n			text-align: center;\n			margin: 0 auto;\n			position: relative;\n		}\n		#banner .inner h1{\n			margin: 0;\n		}\n		button{\n			border: none;\n			background: #AD5A5A;\n			color: #ff0000;\n			padding: 10px;\n		}\n		#banner button{\n			padding: 14px 60px;\n		}\n		#banner .inner .more{\n			margin-top: 280px;\n		}\n		.sub-heading{\n			line-height: 30x;\n			margin: 30px 0;\n		}\n		\n		.logo{\n			font-size: 20px;\n			font-weight: 700;\n			letter-spacing: 1px;\n			color: #fff;\n		}\n		.logo a, h1, #banner{\n			color: #fff;\n			text-decoration: none;\n		}\n		.active{\n			border-bottom: 0px solid #fff;\n		}\n		h1{\n			padding: 12px;\n			border-top: 2px solid #fff;\n			border-bottom: 2px solid #fff;\n		}\n		h2{\n			font-size: 30px;\n		}\n		.hr{\n			width: 100%;\n			height: 2px;\n			margin: 20 auto;\n		}\n		.green-section{\n			background: #089DB0;\n			color:#fff;\n			text-align: center;\n			padding: 100px 0;\n		}\n		.green-section .hr{\n			background: #078494;\n			margin:20px auto;\n			width: 60%;\n		}\n		.green-section .icon-group .icon{\n			display: inline-block;\n			width: 80px;\n			height: 80px;\n			border: 1px solid #0D6F7C;\n			transform: rotate(45deg);\n			margin: 20px;\n		}\n		.icon-group{\n			margin-top: 60px;\n		}\n		.wrapper{\n			max-width: 1080px;\n			margin: 0 auto;\n		}\n		.gray-section{\n			background: #252F34;\n			color: #fff;\n		}\n		.gray-section .img-section{\n			width: 45%;\n		}\n		.img-section img{\n			width: 100%;\n		}\n		.gray-section .text-section{\n			width: 55%;\n			\n		}\n		.article-preview > div{\n			float: left;\n			font-size: 0;\n		}\n		.article-preview:nth-child(odd){\n			background-color: rgba(255,255,255,0.05);\n		}\n		.article-preview:after{\n			content: '';\n			display: block;\n			clear: both;\n		}\n		.text-section{\n			position: relative;\n			top:68px;\n			left: 50px;\n		}\n		.text-section h2{\n			margin-bottom: 20px; \n		}\n		.text-section .sub-heading{\n			font-size: 22px;\n		}\n		.text-section p{\n			font-size: 18px;\n			letter-spacing: 1px;\n		}\n		.text-section > * {\n			max-width: 90%;\n		}\n		ul{margin: 0;}\n		footer{\n			background: #333;\n			color: #fff;\n			min-height: 200px;\n			text-align: center;\n		}\n		ul.share-group{\n			display: block;\n			width: 1080px;\n			margin: 0 auto;\n			padding: 50px;\n\n		}\n		.share-group li{\n			display: inline-block;\n			padding: 10px;\n		}\n		.copy{\n			padding-bottom: 20px;\n		}\n		.main-wrapper{\n			background: #444 url(images/bg.gif);\n			background-attachment: fixed;\n			background-repeat: no-repeat;\n			background-size: cover;\n			background-position: center center;\n		}",
+			"0000c0"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "all.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"fistdemo.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

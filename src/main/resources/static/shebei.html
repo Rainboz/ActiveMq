@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+	a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+font-size: 14px;
+font-weight: bold;
+}
+	.main { 
+      width: 940px;
+      height: 550px;
+      background-color: #4689e1; 
+    }
+    .head{
+    	color: #fff;
+    }
+    #ctl{
+    	margin-left: 12px;
+    }
+    #closeDeviceList{
+    	float: right;
+    	margin-right:12px; 
+    }
+    #top{
+    	padding-top: 10px;
+    }
+    #top_b{
+    	float: left;
+    	margin: 10px;
+    }
+    #top_l{
+    	float: left;
+    	margin-left: 15px;
+    	padding-top: 5px;
+    	font-size: 12px;
+    }
+    #top_r{
+    	float: right;
+    	padding-top: 5px;
+    	font-size: 12px;
+    	margin-right: 15px;
+    }
+    .top_main{
+		height: 40px;
+    }
+    .center_c{
+    	height: 100%;
+      background-color: #ffffff; 
+      margin: 10px;
+    }
+    .center{
+    	height: 90%;
+    }
+    .f_l{
+    	margin: 5px;
+    	float: left;
+    	font-size: 12px;
+    }
+    #name{
+    	width: 141px;
+    }
+    #kch{
+    	width: 105px;
+    }
+
+   tr {
+     border:1px solid #c0c0c0;
+     text-align: center;
+   }
+   .f_img img{
+   	height: 20px;
+   	width: 20px;
+   	margin: 5px;
+   }
+   .content{
+   	 display: block; 
+     position: absolute; 
+     width: 80%; 
+     height: 80%; 
+     top: 20%;
+     border: 2px solid orange; 
+     background-color: white; 
+     z-index:1002; 
+     overflow: auto;
+
+   }
+   #light{
+    display: none; 
+            position: absolute; 
+
+            width: 80%; 
+            height: 80%; 
+            top: 20%;
+			left: 20%;
+            background-color: white; 
+            z-index:1002; 
+   }
+   .white_content { 
+            display: none; 
+            position: absolute; 
+
+            width: 80%; 
+            height: 80%; 
+            top: 20%;
+			
+            background-color: white; 
+            z-index:1002; 
+            
+    }
+    #table_div{}
+    #table_km{} 
+    td ,th{
+    	border: 1px solid #c0c0c0;
+    	white-space: nowrap;
+
+    }
+
+
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	function formatDate(date, format) {   
+    if (!date) return;   
+    if (!format) format = "yyyy-MM-dd";   
+    switch(typeof date) {   
+        case "string":   
+            date = new Date(date.replace(/-/, "/"));   
+            break;   
+        case "number":   
+            date = new Date(date);   
+            break;   
+    }    
+    if (!date instanceof Date) return;   
+    var dict = {   
+        "yyyy": date.getFullYear(),   
+        "M": date.getMonth() + 1,   
+        "d": date.getDate(),   
+        "H": date.getHours(),   
+        "m": date.getMinutes(),   
+        "s": date.getSeconds(),   
+        "MM": ("" + (date.getMonth() + 101)).substr(1),   
+        "dd": ("" + (date.getDate() + 100)).substr(1),   
+        "HH": ("" + (date.getHours() + 100)).substr(1),   
+        "mm": ("" + (date.getMinutes() + 100)).substr(1),   
+        "ss": ("" + (date.getSeconds() + 100)).substr(1)   
+    };       
+    return format.replace(/(yyyy|MM?|dd?|HH?|ss?|mm?)/g, function() {   
+        return dict[arguments[0]];   
+    });                   
+}   
+
+
+
+ var mouseX, mouseY;  
+        var objX, objY;  
+        var isDowm = false; 
+        function mouseDown(obj, e) {  
+        	var div = document.getElementById("light");  
+            obj.style.cursor = "move";  
+			objX = div.offsetLeft;
+			objY = div.offsetTop;
+            mouseX = e.clientX;  
+            mouseY = e.clientY;  
+            isDowm = true;  
+        }  
+        function mouseMove(e) {  
+            var div = document.getElementById("light");  
+            var x = e.clientX;  
+            var y = e.clientY;  
+            if (isDowm) {  
+                div.style.left = parseInt(objX) + parseInt(x) - parseInt(mouseX) + "px";  
+                div.style.top = parseInt(objY) + parseInt(y) - parseInt(mouseY) + "px";  
+            }  
+        }  
+        function mouseUp(e) {  
+            if (isDowm) {  
+                var x = e.clientX;  
+                var y = e.clientY;  
+                var div = document.getElementById("light");  
+                div.style.left = parseInt(objX) + parseInt(x) - parseInt(mouseX) + "px";  
+                div.style.top = parseInt(objY) + parseInt(y) - parseInt(mouseY) + "px";  
+                div.style.cursor = "default";  
+                isDowm = false;  
+            }  
+        }  
+        $(function(){
+
+        });
+</script>
+<button class="btn" onclick = "document.getElementById('light').style.display='block';">点击弹出</button>
+	<section id="light" class="white_content"  onmousedown="mouseDown(this,event)" onmousemove="mouseMove(event)" onmouseup="mouseUp(event)">
+        
+         <div class="main">
+		<div class="head">
+			<div id="top">
+				<span id="ctl">控制柜</span>
+				<input onclick = "document.getElementById('light').style.display='none';" id="closeDeviceList" style="height: 25px;width: 25px" type="image" src="close.png"  name="img" />
+				
+			</div>
+			
+		</div>
+		<div class="center">
+			<div class="center_c">
+				<div style="height: 30px;margin: 5px;">
+					<img class="f_l" src="close.png" style="height: 20px;" />
+					<span class="f_l">状态查询</span>
+					<span class="f_l">
+						<a onclick="test()">
+							<input style="height: 18px;width: 18px" type="image" src="close.png"  name="img" />
+							<i>打开开关</i>
+						</a>
+						
+					</span>
+					<span class="f_l">
+						<a onclick="test()">
+							<input  style="height: 18px;width: 18px" type="image" src="close.png"  name="img" />
+							<i>关闭开关</i>
+						</a>
+					</span>
+				</div>
+				<div style="overflow: auto;">
+					<table class="" style="width: 100%;">
+						<tr>
+							<td width="5%">行号</td>
+							<td width="5%"><input id="allKm" type="checkbox" name="" /></th>
+							<td width="14.6%">控制柜</td>
+							<td width="6.9%">集中器</td>
+							<td width="4.7%">状态</td>
+							<td width="6.9%">开关</td>
+							<td width="4.7%">状态</td>
+							<td width="14.6%">查询时间</td>
+							<td width="14.6%">动作时间</td>
+							<td width="4.7%">地址</td>
+							<td width="4.7%">通道</td>
+							<td width="6.9%">场景</td>
+							<td width="6.9%">当前模式</td>
+							<td width="6.9%">设定状态</td>
+							<td width="6.9%">目录</td>
+							<td>aa</td>
+						</tr>
+					</table>
+				</div>
+				<div id="table_div"  cellspacing="0" cellpadding="0" style="height: 80%;width: 100%;overflow:auto;margin: 0px auto;">
+					
+					<table class="table table-hover" id="table_km" style="height: 411px;border: 0.5px solid #c0c0c0;width:100%;margin:0px auto;font-size: 12px;">
+						<tr>
+							<td width="5%">1</td>
+							<td width="5%">
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td width="14.6%">自自自自自自自自自自2</td>
+							<td width="6.9%">11877</td>
+							<td width="4.7%">信号</td>
+							<td width="6.9%">KM11</td>
+							<td width="4.7%">status</td>
+							<td width="14.6%">qtime</td>
+							<td width="14.6%">stime</td>
+							<td width="4.7%">add</td>
+							<td width="4.7%">kch</td>
+							<td width="6.9%"></td>
+							<td width="6.9%"></td>
+							<td width="6.9%">--</td>
+							<td width="6.9%">上虞</td>
+
+						</tr>
+							<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+							<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+							<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+							<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+							<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+							<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+							<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+							<tr>
+							<td>1</td>
+							<td>
+								<input type="checkbox" name="testKm"  />
+							</td>
+							<td>1PD</td>
+							<td>11877</td>
+							<td>信号</td>
+							<td>KM11</td>
+							<td>status</td>
+							<td>qtime</td>
+							<td>stime</td>
+							<td>add</td>
+							<td>kch</td>
+							<td></td>
+							<td></td>
+							<td>--</td>
+							<td>上虞</td>
+							
+						</tr>
+					</table>
+				</div>
+				
+			</div>
+			</div>
+			
+		</div>
+		</div>
+		
+	</div>
+    </section>
+</body>
+</html>

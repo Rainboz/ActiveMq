@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<style type="text/css">
+	a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+font-size: 14px;
+font-weight: bold;
+}
+	.main { 
+      width: 400px;
+      height: 600px;
+      background-color: #4689e1; 
+      border-radius:15px;
+
+    }
+    .head{
+    	color: #fff;
+    }
+    .foot{
+    	color: #fff;
+    	font-size: 12px;
+    }
+    #ctl{
+    	margin-left: 12px;
+    }
+    #closeDeviceList{
+    	float: right;
+    	margin-right:12px; 
+    }
+    #top{
+    	padding-top: 10px;
+    }
+    #top_b{
+    	float: left;
+    	margin: 10px;
+    }
+    #top_l{
+    	float: left;
+    	margin-left: 15px;
+    	padding-top: 5px;
+    	font-size: 12px;
+    }
+    #top_r{
+    	float: right;
+    	padding-top: 5px;
+    	font-size: 12px;
+    	margin-right: 15px;
+    }
+    .top_main{
+		height: 40px;
+    }
+    .center_c{
+    	width: 380px;
+      height: 200px;
+      background-color: #ffffff; 
+      border-radius:5px;
+      margin: 10px;
+    }
+    .f_l{
+    	margin: 5px;
+    	float: left;
+    	font-size: 12px;
+    }
+    #name{
+    	width: 141px;
+    }
+    #kch{
+    	width: 105px;
+    }
+
+   tr {
+     border:1px solid #c0c0c0;
+     text-align: center;
+   }
+   .f_img img{
+   	height: 20px;
+   	width: 20px;
+   	margin: 5px;
+   }
+   .content{
+   	 display: block; 
+     position: absolute; 
+     width: 80%; 
+     height: 80%; 
+     top: 20%;
+     border: 2px solid orange; 
+     background-color: white; 
+     z-index:1002; 
+     overflow: auto;
+
+   }
+   #light{
+    display: none; 
+            position: absolute; 
+
+            width: 80%; 
+            height: 80%; 
+            top: 20%;
+			left: 20%;
+            background-color: white; 
+            z-index:1002; 
+   }
+   .white_content { 
+            display: none; 
+            position: absolute; 
+
+            width: 80%; 
+            height: 80%; 
+            top: 20%;
+			
+            background-color: white; 
+            z-index:1002; 
+            
+    } 
+</style>
+</head>
+<script type="text/javascript">
+	function formatDate(date, format) {   
+    if (!date) return;   
+    if (!format) format = "yyyy-MM-dd";   
+    switch(typeof date) {   
+        case "string":   
+            date = new Date(date.replace(/-/, "/"));   
+            break;   
+        case "number":   
+            date = new Date(date);   
+            break;   
+    }    
+    if (!date instanceof Date) return;   
+    var dict = {   
+        "yyyy": date.getFullYear(),   
+        "M": date.getMonth() + 1,   
+        "d": date.getDate(),   
+        "H": date.getHours(),   
+        "m": date.getMinutes(),   
+        "s": date.getSeconds(),   
+        "MM": ("" + (date.getMonth() + 101)).substr(1),   
+        "dd": ("" + (date.getDate() + 100)).substr(1),   
+        "HH": ("" + (date.getHours() + 100)).substr(1),   
+        "mm": ("" + (date.getMinutes() + 100)).substr(1),   
+        "ss": ("" + (date.getSeconds() + 100)).substr(1)   
+    };       
+    return format.replace(/(yyyy|MM?|dd?|HH?|ss?|mm?)/g, function() {   
+        return dict[arguments[0]];   
+    });                   
+}   
+
+
+function test(){
+	var datastr="/Date(+0800)/"; //模拟我们返回的json日期格式
+
+	var newdate=eval(datastr.replace(/\//g, '')); // 通过这个方法日期被格式化成了"Wed Aug 20 2014 18:54:10 GMT+0800 (中国标准时间)"标准时间格式
+	alert(formatDate(newdate, "yyyy-MM-dd HH:mm:ss"));   
+	alert(formatDate(newdate, "yyyy-MM-dd")); 
+}
+
+ var mouseX, mouseY;  
+        var objX, objY;  
+        var isDowm = false; 
+        function mouseDown(obj, e) {  
+        	var div = document.getElementById("light");  
+            obj.style.cursor = "move";  
+			objX = div.offsetLeft;
+			objY = div.offsetTop;
+            mouseX = e.clientX;  
+            mouseY = e.clientY;  
+            isDowm = true;  
+        }  
+        function mouseMove(e) {  
+            var div = document.getElementById("light");  
+            var x = e.clientX;  
+            var y = e.clientY;  
+            if (isDowm) {  
+                div.style.left = parseInt(objX) + parseInt(x) - parseInt(mouseX) + "px";  
+                div.style.top = parseInt(objY) + parseInt(y) - parseInt(mouseY) + "px";  
+            }  
+        }  
+        function mouseUp(e) {  
+            if (isDowm) {  
+                var x = e.clientX;  
+                var y = e.clientY;  
+                var div = document.getElementById("light");  
+                div.style.left = parseInt(objX) + parseInt(x) - parseInt(mouseX) + "px";  
+                div.style.top = parseInt(objY) + parseInt(y) - parseInt(mouseY) + "px";  
+                div.style.cursor = "default";  
+                isDowm = false;  
+            }  
+        }  
+</script>
+<body>
+<div class="input-group col-md-2" style="margin-top:0px positon:relative">
+       <input type="text" class="form-control"placeholder="请输入字段名" / >
+            <span class="input-group-btn">
+               <button class="btn btn-info btn-search">查找</button>
+               
+            </span>
+ </div>
+
+<button class="btn" onclick = "document.getElementById('light').style.display='block';">点击弹出</button>
+	<section id="light" class="white_content"  onmousedown="mouseDown(this,event)" onmousemove="mouseMove(event)" onmouseup="mouseUp(event)">
+        
+         <div class="main">
+		<div class="head">
+			<div id="top">
+				<span id="ctl">控制柜</span>
+				<input onclick = "document.getElementById('light').style.display='none';" id="closeDeviceList" style="height: 25px;width: 25px" type="image" src="close.png"  name="img" />
+				
+			</div>
+			<hr width="95%" style="border: 0.3px solid #fff" />
+			<div class="top_main">
+				<span id="top_b"><img src="box.png" style="height: 25px;width: 25px" /></span>
+				
+				<span style="margin-left: 15px;">XXXXXXXXXX开关箱</span>
+				<div>
+					<span id="top_l">UID: XXXX</span>
+					<span id="top_r">状态：-69 dBm</span>
+				</div>
+				
+			</div>
+		</div>
+		<div class="center">
+			<div class="center_c">
+				<div style="height: 30px;margin: 5px;">
+					<img class="f_l" src="close.png" style="height: 20px;" />
+					<span class="f_l">数据查询</span>
+					<span class="f_l">
+						<select id="name">
+							<option>1</option>
+						</select>
+					</span>
+					<span class="f_l">
+						<select id="kch">
+							<option>2</option>
+						</select>
+					</span>
+				</div>
+				<div style="height: 125px;width: 370px;margin: 5px;">
+					<table class="table-bordered" style="border: 0.5px solid #c0c0c0;width:367px;font-size: 12px;">
+						<tr>
+							<th><select><option>相位</option></select></th>
+							<th><select><option>电流(A)</option></select></th>
+							<th><select><option>电压(V)</option></select></th>
+							<th><select><option>功率(kW)</option></select></th>
+							<th><select><option>电能</option></select></th>
+						</tr>
+						<tr>
+							<td>A</td>
+							<td>0.00</td>
+							<td>235.46</td>
+							<td>0.00</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>B</td>
+							<td>0.00</td>
+							<td>235.47</td>
+							<td>0.00</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>C</td>
+							<td>0.00</td>
+							<td>235.85</td>
+							<td>0.00</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>合相</td>
+							<td>0.00</td>
+							<td>235.60</td>
+							<td>0.00</td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<span style="float: right;margin-right: 5px;font-size: 12px;">采集时间：2018:08:14</span>
+			</div>
+			<div class="center_c">
+				<div style="height: 30px;margin: 5px;">
+					<img class="f_l" src="close.png" style="height: 20px;" />
+					<span class="f_l">状态查询</span>
+					<span class="f_l">
+						<a onclick="test()">
+							<input style="height: 18px;width: 18px" type="image" src="close.png"  name="img" />
+							<i>打开开关</i>
+						</a>
+						
+					</span>
+					<span class="f_l">
+						<a onclick="test()">
+							<input  style="height: 18px;width: 18px" type="image" src="close.png"  name="img" />
+							<i>关闭开关</i>
+						</a>
+					</span>
+				</div>
+				<div style="height: 125px;width: 370px;margin: 5px;overflow:auto;">
+					<table class="table-bordered" style="border: 0.5px solid #c0c0c0;width:367px;font-size: 12px;">
+						<tr>
+							<th><select><option>开关</option></select></th>
+							<th><select><option>状态</option></select></th>
+							<th><select><option>查询时间</option></select></th>
+							<th><select><option>动作时间</option></select></th>
+							<th><select><option>操作</option></select></th>
+						</tr>
+						<tr>
+							<td>KM12</td>
+							<td>开</td>
+							<td>2018:08:14 15:16:47</td>
+							<td>2018:08:14</td>
+							<td>
+								<input type="checkbox" name="praiseAll" class="J_select_all" />
+							</td>
+						</tr>
+						<tr>
+							<td>KM12</td>
+							<td>关</td>
+							<td>2018:08:14 15:16:47</td>
+							<td>2018:08:14</td>
+							<td>
+								<input type="checkbox" name="praiseAll" class="J_select_all" />
+							</td>
+						</tr>
+						<tr>
+							<td>KM12</td>
+							<td>关</td>
+							<td>2018:08:14 15:16:47</td>
+							<td>2018:08:14</td>
+							<td>
+								<input type="checkbox" name="praiseAll" class="J_select_all" />
+							</td>
+						</tr>
+						<tr>
+							<td>KM12</td>
+							<td>关</td>
+							<td>2018:08:14 15:16:47</td>
+							<td>2018:08:14</td>
+							<td>
+								<input type="checkbox" name="praiseAll" class="J_select_all" />
+							</td>
+						</tr>
+						<tr>
+							<td>KM12</td>
+							<td>关</td>
+							<td>2018:08:14 15:16:47</td>
+							<td>2018:08:14</td>
+							<td>
+								<input type="checkbox" name="praiseAll" class="J_select_all" />
+							</td>
+						</tr>
+					</table>
+				</div>
+				<span style="float: right;margin-right: 5px;font-size: 12px;">采集时间：2018:08:14</span>
+			</div>
+			</div>
+			<div class="foot">
+			
+			<div class="f_img">
+				<span style="margin-left: 15px;">控制柜信息：</span>
+				<span style="margin-left: 10px;"><img src="box.png" /><i>7</i></span>
+				<span style="margin-left: 10px;"><img src="kuai.png" /><i>7</i></span>
+			</div>
+			<div class="f_img">
+				<span style="margin-left: 15px;">终端信息：</span>
+				<span style="margin-left: 10px;"><img src="done.png" /><i>7</i></span>
+				<span style="margin-left: 10px;"><img src="break.png" /><i>7</i></span>
+				<span style="margin-left: 10px;"><img src="light.png" /><i>7</i></span>
+				<span style="margin-left: 10px;"><img src="warn.png" /><i>7</i></span>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+    </section>
+
+</body>
+</html>

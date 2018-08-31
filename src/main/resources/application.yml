@@ -1,0 +1,11 @@
+logging:
+  #日志存储地址
+  file: "logs/config/ActiveMQ.log"
+info:
+  name : "主题消息"
+
+server:
+  #端口号
+  port: 8999
+  #项目名，如果不设定，默认是 /
+  #context-path: /ActiveMQ
