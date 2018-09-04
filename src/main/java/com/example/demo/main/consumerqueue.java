@@ -1,6 +1,5 @@
 package com.example.demo.main;
 
-import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,10 +12,10 @@ import org.springframework.stereotype.Component;
 public class Consumerqueue {
 
 
-    @JmsListener(destination = "topic.sylh",containerFactory="jmsListenerContainerTopic")
-    public void receiveTopic(String text){
-        System.out.println("Topic Consumer1:"+text);
-    }
+//    @JmsListener(destination = "topic.sylh",containerFactory="jmsListenerContainerTopic")
+//    public void receiveTopic(String text){
+//        System.out.println("Topic Consumer1:"+text);
+//    }
 //    @JmsListener(destination = "topic.sylh",containerFactory="jmsListenerContainerTopic")
 //    public void receiveTopic2(String text){
 //        System.out.println("Topic Consumer2:"+text);

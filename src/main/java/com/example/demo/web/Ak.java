@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+
 public class Ak {
     //templates动态页面
     @GetMapping("/templates")
