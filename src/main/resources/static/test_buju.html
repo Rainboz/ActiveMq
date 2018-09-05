@@ -153,9 +153,9 @@ height:100%; margin:0;padding:0;
         var myChart = echarts.init(document.getElementById('table'));
 
           //指定图表的配置项和数据
-        var option = {
-            
-            title:{
+var option = {
+    baseOption: { // 这里是基本的『原子option』。
+       title:{
                 text:'总览'
             },
             //提示框组件
@@ -166,86 +166,86 @@ height:100%; margin:0;padding:0;
             },
             //图例
             legend:{
-                data:['']
+                data:['A','B','C']
             },
             //控制边距　
-        	grid: {
+            grid: {
                 left: '5%',
                 right:'0%',
                 containLabel: true,
-        	},
+            },
             //横轴
             xAxis:{
 
-            	name:'日期',
-            	nameLocation:"middle",
-            	nameGap:40, 
+                name:'日期',
+                nameLocation:"middle",
+                nameGap:40, 
                 data:["8-1","8-2","8-3","8-4","8-5","8-6","8-7","8-8","8-9","8-10","8-11","8-12","8-13","8-14","8-15","8-16"],
                 axisLabel:{
-              		rotate:45, //刻度旋转45度角
-              		textStyle:{
-                		color:"#7cb5ec",
-                 		fontSize:16,
-            		}
-            	},
-            	axisLabel:{
-                 	//X轴刻度配置
-                 	interval:0 //0：表示全部显示不间隔；auto:表示自动根据刻度个数和宽度自动设置间隔个数
-            	}
+                    rotate:45, //刻度旋转45度角
+                    textStyle:{
+                        color:"#7cb5ec",
+                        fontSize:16,
+                    }
+                },
+                axisLabel:{
+                    //X轴刻度配置
+                    interval:0 //0：表示全部显示不间隔；auto:表示自动根据刻度个数和宽度自动设置间隔个数
+                }
             },
             //纵轴
             yAxis:{
-            	name:'耗电量(kWh)',
-            	nameLocation:"middle",
-            	nameGap:60, 
-            	type:'value',
-            	min:0,
-            	max:2750,
+                name:'耗电量(kWh)',
+                nameLocation:"middle",
+                nameGap:60, 
+                type:'value',
+                min:0,
+                max:2750,
                 axisLine:{
-                	show:false
+                    show:false
                 },
                 interval: 250
-				
+                
 
             },
             //系列列表。每个系列通过type决定自己的图表类型
             series:[{
                 name:'销量',
-        		//设置柱子的宽度
-           		barWidth : 30,
-            	//配置样式
-            	itemStyle: {   
-                	//通常情况下：
-                	/*normal:{  
+                //设置柱子的宽度
+                barWidth : 30,
+                //配置样式
+                itemStyle: {   
+                    //通常情况下：
+                    /*normal:{  
 　　　　　　　　　　　　//每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
-                    	color: function (params){
-                      	  var colorList = ['rgb(164,205,238)','rgb(42,170,227)','rgb(25,46,94)','rgb(195,229,235)'];
-                        	return colorList[params.dataIndex];
-                   	 	}
-                	},*/
-                	normal: {
-                		label : {
-                			show: true, 
-                			textStyle: {
-                    			fontWeight: 'bolder',
-                    			fontSize: '12',
-                    			fontFamily: '微软雅黑',
-                    			color: '#8d9ba8'
-               				},
-                			position: 'top',
+                        color: function (params){
+                          var colorList = ['rgb(164,205,238)','rgb(42,170,227)','rgb(25,46,94)','rgb(195,229,235)'];
+                            return colorList[params.dataIndex];
+                        }
+                    },*/
+                    normal: {
+                        label : {
+                            show: true, 
+                            textStyle: {
+                                fontWeight: 'bolder',
+                                fontSize: '12',
+                                fontFamily: '微软雅黑',
+                                color: '#8d9ba8'
+                            },
+                            position: 'top',
 
-                		},
-                		color: '#7cb5ec'
-                	},
-                	
-                	//鼠标悬停时：
-                	emphasis: {
+                        },
+                        color: '#7cb5ec'
+                    },
+                    
+                    //鼠标悬停时：
+                    emphasis: {
                         shadowBlur: 10,
                         shadowOffsetX: 0,
                         shadowColor: 'rgba(0, 0, 0, 0.5)'
-                	}
-            	},
-                //折线图
+                    }
+                },
+                //
                 type:'bar',
                 data:[
                     {name: 'A', value: 1919},
@@ -267,15 +267,75 @@ height:100%; margin:0;padding:0;
                 ]
             }],
             label: {
-      			normal: {
-          			show: true,
-          			position: 'top',
-          			textStyle: {
-            			color: 'black'
-         			}
-     			} 
-   			}
-        };
+                normal: {
+                    show: true,
+                    position: 'top',
+                    textStyle: {
+                        color: 'black'
+                    }
+                } 
+            }
+    },
+    media: [
+            {
+                option: {
+                    legend: {
+                        right: 'center',
+                        bottom: 0,
+                        orient: 'horizontal'
+                    },
+                    series: [
+                        {type:'bar'}
+                    ]
+                }
+            },
+            {
+                query: {
+                    minAspectRatio: 1
+                },
+                option: {
+                    legend: {
+                        right: 'center',
+                        bottom: 0,
+                        orient: 'horizontal'
+                    },
+                    series: [
+                       {type:'bar'}
+                    ]
+                }
+            },
+            {
+                query: {
+                    maxAspectRatio: 1
+                },
+                option: {
+                    legend: {
+                        right: 'center',
+                        bottom: 0,
+                        orient: 'horizontal'
+                    },
+                    series: [
+                        {type:'bar'}
+                    ]
+                }
+            },
+            {
+                query: {
+                    maxWidth: 500
+                },
+                option: {
+                    legend: {
+                        right: 10,
+                        top: '15%',
+                        orient: 'vertical'
+                    },
+                    series: [
+                        {type:'bar'}
+                    ]
+                }
+            }
+        ]        
+};
         		//使用刚指定的配置项和数据显示图表
         		myChart.setOption(option);
     		</script>
