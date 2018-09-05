@@ -1,5 +1,6 @@
 package com.example.demo.wechat.util;
 
+import com.example.demo.wechat.resp.*;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.core.util.QuickWriter;
 import com.thoughtworks.xstream.io.HierarchicalStreamWriter;
@@ -24,8 +25,6 @@ import java.util.Map;
  */
 public class MessageUtil {
 
-    public static final String REQ_MESSAGE_TYPE_VIDEO = "video";
-
     /**
      * 返回消息类型：文本
      */
@@ -40,6 +39,21 @@ public class MessageUtil {
      * 返回消息类型：图文
      */
     public static final String RESP_MESSAGE_TYPE_NEWS = "news";
+
+    /**
+     * 返回消息类型：图片
+     */
+    public static final String RESP_MESSAGE_TYPE_Image = "image";
+
+    /**
+     * 返回消息类型：语音
+     */
+    public static final String RESP_MESSAGE_TYPE_Voice = "voice";
+
+    /**
+     * 返回消息类型：视频
+     */
+    public static final String RESP_MESSAGE_TYPE_Video = "video";
 
     /**
      * 请求消息类型：文本
@@ -67,6 +81,11 @@ public class MessageUtil {
     public static final String REQ_MESSAGE_TYPE_VOICE = "voice";
 
     /**
+     * 请求消息类型：视频
+     */
+    public static final String REQ_MESSAGE_TYPE_VIDEO = "video";
+
+    /**
      * 请求消息类型：推送
      */
     public static final String REQ_MESSAGE_TYPE_EVENT = "event";
@@ -86,20 +105,32 @@ public class MessageUtil {
      */
     public static final String EVENT_TYPE_CLICK = "CLICK";
 
-    public static final String EVENT_TYPE_SCAN = "SCAN";
-
-    public static final String EVENT_TYPE_LOCATION = "LOCATION";
-
+    /**
+     * 事件类型：VIEW(自定义菜单 URl 视图)
+     */
     public static final String EVENT_TYPE_VIEW = "VIEW";
 
     /**
+     * 事件类型：LOCATION(上报地理位置事件)
+     */
+    public static final String EVENT_TYPE_LOCATION = "LOCATION";
+
+    /**
+     * 事件类型：LOCATION(上报地理位置事件)
+     */
+    public static final String EVENT_TYPE_SCAN = "SCAN";
+
+    /**
      * @Description: 解析微信发来的请求（XML）
+     * @param @param request
+     * @param @return
+     * @param @throws Exception
      */
     @SuppressWarnings("unchecked")
-    public static Map<String, String> parseXml(HttpServletRequest request) throws Exception {
+    public static Map<String, String> parseXml(HttpServletRequest request)
+            throws Exception {
         // 将解析结果存储在 HashMap 中
         Map<String, String> map = new HashMap<String, String>();
-
         // 从 request 中取得输入流
         InputStream inputStream = request.getInputStream();
         // 读取输入流
@@ -111,7 +142,7 @@ public class MessageUtil {
         List<Element> elementList = root.elements();
 
         // 遍历所有子节点
-            for (Element e : elementList)
+        for (Element e : elementList)
             map.put(e.getName(), e.getText());
 
         // 释放资源
@@ -121,12 +152,77 @@ public class MessageUtil {
         return map;
     }
 
-    @SuppressWarnings("unused")
+    /**
+     * @Description: 文本消息对象转换成 xml
+     * @param @param textMessage
+     * @param @return
+     */
+    public static String textMessageToXml(TextMessage textMessage) {
+        xstream.alias("xml", textMessage.getClass());
+        return xstream.toXML(textMessage);
+    }
+
+    /**
+     * @Description: 图文消息对象转换成 xml
+     * @param @param newsMessage
+     * @param @return
+     */
+    public static String newsMessageToXml(NewsMessage newsMessage) {
+        xstream.alias("xml", newsMessage.getClass());
+        xstream.alias("item", new Article().getClass());
+        return xstream.toXML(newsMessage);
+    }
+
+    /**
+     * @Description: 图片消息对象转换成 xml
+     * @param @param imageMessage
+     * @param @return
+     */
+    public static String imageMessageToXml(ImageMessage imageMessage) {
+        xstream.alias("xml", imageMessage.getClass());
+        return xstream.toXML(imageMessage);
+    }
+
+    /**
+     * @Description: 语音消息对象转换成 xml
+     * @param @param voiceMessage
+     * @param @return
+     */
+    public static String voiceMessageToXml(VoiceMessage voiceMessage) {
+        xstream.alias("xml", voiceMessage.getClass());
+        return xstream.toXML(voiceMessage);
+    }
+
+    /**
+     * @Description: 视频消息对象转换成 xml
+     * @param @param videoMessage
+     * @param @return
+
+     */
+    public static String videoMessageToXml(VideoMessage videoMessage) {
+        xstream.alias("xml", videoMessage.getClass());
+        return xstream.toXML(videoMessage);
+    }
+
+    /**
+     * @Description: 音乐消息对象转换成 xml
+     * @param @param musicMessage
+     * @param @return
+     */
+    public static String musicMessageToXml(MusicMessage musicMessage) {
+        xstream.alias("xml", musicMessage.getClass());
+        return xstream.toXML(musicMessage);
+    }
+
+    /**
+     * 对象到 xml 的处理
+     */
     private static XStream xstream = new XStream(new XppDriver() {
         public HierarchicalStreamWriter createWriter(Writer out) {
             return new PrettyPrintWriter(out) {
                 // 对所有 xml 节点的转换都增加 CDATA 标记
                 boolean cdata = true;
+
                 @SuppressWarnings("rawtypes")
                 public void startNode(String name, Class clazz) {
                     super.startNode(name, clazz);
