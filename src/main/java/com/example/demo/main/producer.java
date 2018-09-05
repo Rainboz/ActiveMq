@@ -1,16 +1,13 @@
 package com.example.demo.main;
 
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.stereotype.Component;
-
 /**
  * @program: StudyActiveMq
  * @description: ${description}
  * @author: ls
  * @create: 2018-08-29 18:18
  */
-@Component
-@EnableScheduling
+//@Component
+//@EnableScheduling
 public class Producer {
 //    @Autowired
 //    private JmsMessagingTemplate jmsMessagingTemplate;

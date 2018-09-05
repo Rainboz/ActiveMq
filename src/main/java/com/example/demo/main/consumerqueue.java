@@ -1,14 +1,12 @@
 package com.example.demo.main;
 
-import org.springframework.stereotype.Component;
-
 /**
  * @program: StudyActiveMq
  * @description: ${description}
  * @author: ls
  * @create: 2018-08-29 18:19
  */
-@Component
+//@Component
 public class Consumerqueue {
 
 
