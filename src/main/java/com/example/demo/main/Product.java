@@ -1,14 +1,14 @@
 package com.example.demo.main;
 
 /**
- * @program: StudyActiveMq
+ * @program: ${CLASS_NAME}
  * @description: ${description}
- * @author: ls
- * @create: 2018-08-29 18:18
+ * @author: LS
+ * @create: 2018-09-05 11:53
  */
 //@Component
 //@EnableScheduling
-public class Producer {
+public class Product {
 //    @Autowired
 //    private JmsMessagingTemplate jmsMessagingTemplate;
 //    @Autowired
@@ -22,3 +22,4 @@ public class Producer {
 //        this.jmsMessagingTemplate.convertAndSend(this.topic,"#sydx#100|11213|dasd,index="+count++);
 //    }
 }
+

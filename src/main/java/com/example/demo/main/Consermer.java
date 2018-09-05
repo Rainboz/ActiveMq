@@ -1,13 +1,13 @@
 package com.example.demo.main;
 
 /**
- * @program: StudyActiveMq
+ * @program: ${CLASS_NAME}
  * @description: ${description}
- * @author: ls
- * @create: 2018-08-29 18:19
+ * @author: LS
+ * @create: 2018-09-05 11:55
  */
 //@Component
-public class Consumerqueue {
+public class Consermer {
 
 
 //    @JmsListener(destination = "topic.sylh",containerFactory="jmsListenerContainerTopic")
