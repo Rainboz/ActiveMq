@@ -6,7 +6,7 @@ package com.rainboz.top.wechat.resp;
  * @author: LS
  * @create: 2018-09-05 08:55
  */
-public class VideoMessage {
+public class VideoMessage extends BaseMessage{
     private Video Video;
 
     public Video getVideo() {

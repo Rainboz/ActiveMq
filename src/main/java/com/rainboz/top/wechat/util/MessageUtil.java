@@ -1,5 +1,6 @@
 package com.rainboz.top.wechat.util;
 
+import com.rainboz.top.wechat.req.LocationMessage;
 import com.rainboz.top.wechat.resp.*;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.core.util.QuickWriter;
@@ -212,6 +213,10 @@ public class MessageUtil {
     public static String musicMessageToXml(MusicMessage musicMessage) {
         xstream.alias("xml", musicMessage.getClass());
         return xstream.toXML(musicMessage);
+    }
+    public static String locationMessageToXml(LocationMessage locationMessage) {
+        xstream.alias("xml", locationMessage.getClass());
+        return xstream.toXML(locationMessage);
     }
 
     /**

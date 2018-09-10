@@ -12,11 +12,18 @@ public class Ak {
     String test(HttpServletRequest request) {
         //逻辑处理
         request.setAttribute("key", "hello world");
-        return "/index";
+        return "/rainboz_web/index";
     }
     //重定向至static下页面
     @GetMapping("/all")
     public String html() {
         return "redirect:/all.html";
     }
+//
+//    @GetMapping("/templates")
+//    String test(HttpServletRequest request) {
+//        //逻辑处理
+//        request.setAttribute("key", "hello world");
+//        return "/index";
+//    }
 }

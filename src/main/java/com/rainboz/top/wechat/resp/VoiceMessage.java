@@ -6,7 +6,7 @@ package com.rainboz.top.wechat.resp;
  * @author: LS
  * @create: 2018-09-05 08:55
  */
-public class VoiceMessage {
+public class VoiceMessage extends BaseMessage{
     private Voice Voice;
 
     public Voice getVoice() {

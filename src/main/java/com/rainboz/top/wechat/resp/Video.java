@@ -11,6 +11,15 @@ public class Video {
     private String Title;
     private String Description;
 
+    @Override
+    public String toString() {
+        return "Video{" +
+                "MediaId='" + MediaId + '\'' +
+                ", Title='" + Title + '\'' +
+                ", Description='" + Description + '\'' +
+                '}';
+    }
+
     public String getTitle() {
         return Title;
     }

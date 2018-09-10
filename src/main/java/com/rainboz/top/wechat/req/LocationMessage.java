@@ -36,6 +36,16 @@ public class LocationMessage extends BaseMessage{
         return Scale;
     }
 
+    @Override
+    public String toString() {
+        return "LocationMessage{" +
+                "Location_X='" + Location_X + '\'' +
+                ", Location_Y='" + Location_Y + '\'' +
+                ", Scale='" + Scale + '\'' +
+                ", Label='" + Label + '\'' +
+                '}';
+    }
+
     public void setScale(String scale) {
         Scale = scale;
     }

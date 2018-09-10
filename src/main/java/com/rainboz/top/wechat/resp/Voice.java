@@ -13,6 +13,13 @@ public class Voice {
         return MediaId;
     }
 
+    @Override
+    public String toString() {
+        return "Voice{" +
+                "MediaId='" + MediaId + '\'' +
+                '}';
+    }
+
     public void setMediaId(String mediaId) {
         MediaId = mediaId;
     }
