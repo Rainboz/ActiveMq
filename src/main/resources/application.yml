@@ -29,7 +29,7 @@ spring:
   profiles: dev
 
   datasource:
-    url: jdbc:mysql://47.100.9.160:3306/activemq?characterEncoding=utf8&useSSL=false
+    url: jdbc:mysql://47.100.9.160:3306/yzedu?characterEncoding=utf8&useSSL=false
     username: root
     password: 550320023zhb.
     filters: stat
